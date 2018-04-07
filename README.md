@@ -1,5 +1,5 @@
 # rtcomn.rb
-A network tool written in Ruby with the intent to scan to whole network, identify each connected device and store them for later usage.
+A network tool written in Ruby with the intent to scan the whole network, identify each connected device and store them for later usage.
 
 # The process
 Rtcomn works by pinging each ip adress in a specific range you provide.
