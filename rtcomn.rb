@@ -15,12 +15,12 @@
 #
 # The point
 # It will ping the whole local adress with the cidr 24 		| CHECK
-# It will get all the local ip adress 						| CHECK
+# It will get all the local ip adress 				| CHECK
 # It will get all the local mac address
 # It will get all the open ports of each adress
 # It will get all the running services on each port
 # It will be able to give each local ip adress a custom name
-# It will now and then scan the adress to find any new user | Semi-CHECK - Able to use cidr 32 for dedicated search
+# It will now and then scan the adress to find any new user 	| half-CHECK - Able to use cidr 32 for dedicated search
 # It will filter the traffic to certain local ip adress to see what it sends and receives
 # It will be able to deauthenicate each device
 # It will be able to block connections
@@ -34,7 +34,7 @@ require "socket"
 begin
 	require "net/ping"
 	rescue LoadError
-	system("gem install net-ping")
+	return("You need to install net-ping.")
 end
 
 # Adding colors
@@ -55,7 +55,7 @@ def c(color)
 		when "cyan"
 			@cyan = "\033[0;36m"         # Cyan
 		when "white"
-			@white = "\033[0m"			 # White
+			@white = "\033[0m"	     # White
 		when "grey"
 			@grey = "\033[0;37m"         # Grey
 	end
@@ -210,7 +210,7 @@ class Scan
 
 	# CIDR 16
 	def Scan::first(range, ip)
-		#
+		# Still on the drawing board
 	end
 	
 	# CIDR 24
@@ -390,6 +390,7 @@ end
 Scan.identify(25, 24)
 #Scan.identify("192.168.0.5", 32)
 
+# NOTE
 #ip.host matches "192" && ip.src == 192.168.0.12 && (not ip.addr==83.255.255.2)  && (not ip.addr==83.255.255.1) && icmpt
 #for x in 0..25
 #	puts Scan.ping("192.168.0.#{x}")
