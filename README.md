@@ -5,7 +5,7 @@ A network tool written in Ruby with the intent to scan the whole network, identi
 Rtcomn works by pinging each ip adress in a specific range you provide.
 ![Demo image one](https://raw.githubusercontent.com/Beyarz/rtcomn.rb/master/img/image_one.png)
 
-What happens in the background is that you're checking if there is any device assigned to the ip adress.
+What happens in the background is that Rtcomn checks if there is any device assigned to the ip adress.
 ![Demo image two](https://raw.githubusercontent.com/Beyarz/rtcomn.rb/master/img/image_two.png)
 
 Rtcomn uses different techniques such as sending UDP pings (Pings to UDP port).
